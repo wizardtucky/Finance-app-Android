@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserActivity">
+
+
+    <ListView
+            android:id="@+id/userList"
+            android:layout_width="350dp"
+            android:layout_height="442dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.842"/>
+
+    <TextView
+            android:id="@+id/textView"
+            android:layout_width="97dp"
+            android:layout_height="64dp"
+            android:text="@string/users"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            app:layout_constraintBottom_toTopOf="@+id/userList"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.909"/>
+    <Button
+            android:id="@+id/logOutBtn"
+            android:layout_width="116dp"
+            android:layout_height="51dp"
+            android:onClick="logOut"
+            android:text="@string/exit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.791"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.756"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintStart_toEndOf="@+id/categoriesBtn"/>
+    <Button
+            android:id="@+id/categoriesBtn"
+            android:layout_width="116dp"
+            android:layout_height="51dp"
+            android:onClick="goToCategories"
+            android:text="@string/cat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.756" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textView" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.101"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="289dp"
+            android:layout_height="32dp" android:id="@+id/activeUser"
+            app:layout_constraintBottom_toTopOf="@+id/categoriesBtn" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" app:layout_constraintHorizontal_bias="0.245"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
